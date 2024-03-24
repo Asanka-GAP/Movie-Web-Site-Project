@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cine Mart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Your Webpage</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="brand">Cine<span class="main-color">M</span>art</a>
+            <div class="navigation">
+                <div class="navigation-items">
+                    <a href="#">Home</a>
+                    <a href="#">Upcoming</a>
+                    <a href="#">Editor's Pick</a>
+                    <a href="#">Trending Now</a>
+                    
+                </div>
+            </div>
+        </header>
+        <section class="home">
+            <div class="content">
+                <h1 class="bigg">Am<span class="main-color">az</span>ing.<br><span class="big">Mo<span class="main-color">v</span>ies</span></h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                <a href="Home.html">Explore</a>
+            </div>
+            <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <!-- New Section (Movie Poster and Email Signup/Log In) -->
+    <section class="movie-poster">
+        <div class="movie-info">
+            <img id="poster-image" src="mortal.jpg" alt="Movie Poster">
+        </div>
+        <div class="signup-form">
+            <h2>Join Cinemart Today!</h2>
+            <p>Enter your email to get started.</p>
+            <form>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already a member? <a href="#">Log in here</a></p>
+        </div>
+    </section>
+
+    <!-- JavaScript for changing the poster -->
+    <script>
+        // Array of movie poster filenames (relative paths)
+        const posterImages = [
+            "images/mortal.jpg",
+            "images/joker.jpg",
+            "images/batman.jpg",
+            "images/rampage.jpg",
+        ];
+
+        // Function to change the movie poster image at regular intervals
+        function changePoster() {
+            const posterImage = document.getElementById("poster-image");
+            let currentIndex = 0;
+
+            setInterval(() => {
+                posterImage.src = posterImages[currentIndex];
+                currentIndex = (currentIndex + 1) % posterImages.length;
+            }, 2000); 
+        }
+
+        // Call the function to start changing the poster
+        changePoster();
+    </script>
+<!-- New Section (Categories) -->
+<section class="categories">
+    <div class="category">
+        <img src="images/batmanpart.jpg" alt="IMDb Top 10">
+        <h3>Upcoming Movies</h3>
+        <p>Discover the Upcoming Movies.</p>
+        <a href="#">Explore</a>
+    </div>
+    <div class="category">
+        <img src="images/openheimer.jpg" alt="Editors' Pick">
+        <h3>Editors' Pick</h3>
+        <p>Our editors' favorite movies for you.</p>
+        <a href="#">Explore</a>
+    </div>
+    <div class="category">
+        <img src="images/barbie.jpg" alt="Trending Now">
+        <h3>Trending Now</h3>
+        <p>Stay updated with the latest movie trends.</p>
+        <a href="#">Explore</a>
+    </div>
+</section>
+
+<!-- New Section (Pricing and Plans) -->
+<section class="pricing-plans">
+    <div class="plan">
+        <h3>Basic Plan</h3>
+        <p>Perfect for movie enthusiasts on a budget.</p>
+        <h2>$5.00/month</h2>
+        <ul>
+            <li>Access to a limited selection of movies.</li>   
+            <li>Standard video quality (e.g., 480p).</li>
+            <li>Ad-free experience.</li>
+            <li>Single-device streaming at a time.</li>
+        </ul>
+        <a href="https://buy.stripe.com/test_dR69DB7GB0OAcHCcMN">Subscribe Now</a>
+    </div>
+    <div class="plan">
+        <h3>Pro Plan</h3>
+        <p>For those who want more movie magic.</p>
+        <h2>$10.00/month</h2>
+        <ul>
+        <li>Access to a larger library of movies and exclusive content.</li>
+        <li>High-definition (HD) video quality (e.g., 720p/1080p).</li>
+        <li>Ad-free experience.</li>
+        <li>Simultaneous streaming on up to two devices.</li>
+        </ul>
+        <a href="https://buy.stripe.com/test_dR69DB7GB0OAcHCcMN">Subscribe Now</a>
+    </div>
+    <div class="plan">
+        <h3>Premium Plan</h3>
+        <p>Unlock the ultimate movie experience.</p>
+        <h2>$15.00/month</h2>
+        <ul>
+            <li>Access to the entire movie catalog, including 4K and HDR content</li>
+            <li>Ad-free experience</li>
+            <li>Simultaneous streaming on multiple devices</li>
+            <li>Offline downloads for on-the-go viewing</li>
+        </ul>
+        <a href="https://buy.stripe.com/test_dR69DB7GB0OAcHCcMN">Subscribe Now</a>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-links">
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="footer-text">
+        <p>&copy; 2023 Cine Mart. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
